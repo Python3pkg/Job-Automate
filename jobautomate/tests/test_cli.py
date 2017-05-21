@@ -28,8 +28,8 @@ def fill(driver):
 def test_indeed_api_parameters(parameters):
     """Test that the Indeed API returns the correct values."""
     assert isinstance(parameters, dict) is True
-    assert 'Financial Analyst' in parameters.values()
-    assert 'New York City' in parameters.values()
+    assert 'Financial Analyst' in list(parameters.values())
+    assert 'New York City' in list(parameters.values())
 
 
 def test_retrieve_indeed_urls(selenium, parameters):

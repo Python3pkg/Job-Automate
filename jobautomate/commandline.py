@@ -110,7 +110,7 @@ def fill_application(driver, first_name, last_name, email, cv):
     """
     job_title = driver.find_element_by_class_name("jobtitle").text
     company = driver.find_element_by_class_name("jobcompany").text
-    print("Applying for: {} at {}".format(job_title, company))
+    print(("Applying for: {} at {}".format(job_title, company)))
     driver.find_element_by_id('applicant.name').send_keys("{} {}" .format(first_name, last_name))
     driver.find_element_by_id('applicant.email').send_keys(email)
     driver.find_element_by_id('resume').send_keys(os.path.abspath(cv))
